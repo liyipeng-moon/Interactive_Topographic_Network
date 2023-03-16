@@ -3097,6 +3097,7 @@ def PCA_pipeline(base_fn, layers=['aIT'], do_readout_weights=False, do_OFS_acts=
             expl_variance = pca_sol.explained_variance_ratio_
             cum_var = [np.sum(expl_variance[:ii]) for ii in range(len(expl_variance))]
 
+
             save_dir = f'{FIGS_DIR}/topographic/EI/summaries/{base_fn}/layer-{layer}_acts_PCs_OFS-to-baotsao'
             os.makedirs(save_dir, exist_ok=True)
 
